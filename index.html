@@ -8,7 +8,54 @@
   </head>
   <body>
     <div class="container">
-        <h1>Gym Users</h1>
+        <div>
+            <h1>Gym Users</h1>
+            <form class="row g-3">
+                <div class="col-auto">
+                    <label for="nameUser" class="visually-hidden">User</label>
+                    <input type="text" class="form-control" id="nameUser" placeholder="Name">
+                </div>
+                <div class="col-auto">
+                    <label for="workout" class="visually-hidden">Workout</label>
+                    <input type="text" class="form-control" id="workout" placeholder="Workout">
+                </div>
+                <div class="col-auto">
+                    <button type="button" class="btn btn-success mb-3">Add</button>
+                    <button type="button" class="btn btn-primary mb-3">Update</button>
+                </div>
+            </form>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <td scope="col">#</td>
+                        <td scope="col">User</td>
+                        <td scope="col">Workout</td>
+                        <td scope="col">Action</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Press</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Swim</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Larry</td>
+                      <td>Bicep curl</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+            </table>
+        </div>
+
         
 
 
