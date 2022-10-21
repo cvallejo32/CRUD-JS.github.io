@@ -20,8 +20,8 @@
                     <input type="text" class="form-control" id="workout" placeholder="Workout">
                 </div>
                 <div class="col-auto">
-                    <button type="button" class="btn btn-success mb-3">Add</button>
-                    <button type="button" class="btn btn-primary mb-3">Update</button>
+                    <button type="button" class="btn btn-success mb-3" onclick="addRegistry()">Add</button>
+                    <button type="button" class="btn btn-primary mb-3" onclick="updateRegistry()">Update</button>
                 </div>
             </form>
             <table class="table">
@@ -34,16 +34,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                      <td scope="row">1</td>
-                      <td>Mark</td>
-                      <td>Press</td>
-                      <td>
-                        <button type="button" class="btn btn-primary" onclick="editRegistry()">Edit</button>
-                        <button type="button" class="btn btn-danger" onclick="deleteRegistry()">Delete</button>
-                      </td>
-                    </tr>
-                  </tbody>
+                </tbody>
             </table>
         </div>    
     </div>
