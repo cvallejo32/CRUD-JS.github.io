@@ -1,19 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CRUD demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto dos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
     <div class="container">
         <div>
-            <h1>Gym Users</h1>
+            <h1>Gym</h1>
             <form class="row g-3">
                 <div class="col-auto">
-                    <label for="nameUser" class="visually-hidden">User</label>
-                    <input type="text" class="form-control" id="nameUser" placeholder="Name">
+                    <label for="nameUser" class="visually-hidden">User Name</label>
+                    <input type="text" class="form-control" id="nameUser" placeholder="User Name">
                     <input type="hidden" id="position">
                 </div>
                 <div class="col-auto">
@@ -22,27 +24,30 @@
                 </div>
                 <div class="col-auto">
                     <button type="button" class="btn btn-success mb-3" onclick="addRegistry()">Add</button>
-                    <button type="button" class="btn btn-primary mb-3" onclick="updateRegistry()">Update</button>
-                    <button type="button" class="btn btn-info mb-3" onclick="clearCache()">Clear</button>
-                    <button type="button" class="btn btn-warning mb-3" onclick="showUsers()">Show</button>
+                    <button type="button" class="btn btn-primary mb-3"
+                        onclick="updateRegistry()">Update</button>
+                    <button type="button" class="btn btn-info mb-3"
+                    onclick="clearCache()">Clear Cache</button>
+                    <button type="button" class="btn btn-warning mb-3" onclick="showUsers()">Update registry</button>
                 </div>
             </form>
             <table class="table">
                 <thead class="thead-dark">
                     <tr>
-                        <td scope="col">#</td>
-                        <td scope="col">User</td>
-                        <td scope="col">Workout</td>
-                        <td scope="col">Action</td>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Workout</th>
+                        <th scope="col">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                 </tbody>
             </table>
-        </div>    
+        </div>
     </div>
-
-    <script src="./javascript/indexcrud.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-  </body>
+    <script src="./js/script/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
 </html>
