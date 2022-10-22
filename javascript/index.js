@@ -56,6 +56,29 @@ let updateRegistry = () => {
         alert('You must select a registry!');
         return false;
     }
+
+    users[position] = {
+        user: nameUser,
+        workout: workout
+    }
+
+    document.getElementById('position').value = '';
+    document.getElementById('nameUser').value = '';
+    document.getElementById('workout').value = '';
+    showUsers(users);
 };
 
-showUsers();
+let addRegistry = () => {
+    console.log(`Agregar `);
+    const newUser = {
+        user: document.getElementById('nameUser').value,
+        workout: document.getElementById('workout').value
+    }
+
+    document.getElementById('nameUser').value = '';
+    document.getElementById('workout').value = '';
+    users.push(newUser);
+    showUsers(users);
+};
+
+showUsers(users);
