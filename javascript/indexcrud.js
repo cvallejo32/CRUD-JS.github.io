@@ -1,3 +1,7 @@
+/**
+ * It gets the data from localStorage, if it's empty, it creates an empty array, then it clears the
+ * table body, then it loops through the array and creates a new row for each element in the array.
+ */
 let showUsers = () => {
     let usersLS = JSON.parse(localStorage.getItem('usersls'))
     if( usersLS === null){
@@ -24,6 +28,12 @@ let showUsers = () => {
     });
 }
 
+
+/**
+ * It takes the index of the user you want to delete, gets the saved users from local storage, filters
+ * out the user you want to delete, and then saves the filtered list back to local storage.
+ * @param parIndex - The index of the user to be deleted.
+ */
 let deleteRegistry = (parIndex) => {
     savedUsers = JSON.parse(localStorage.getItem('usersls'))
     savedUsers = savedUsers.filter((alumno, index) => index !== parIndex);
@@ -31,6 +41,10 @@ let deleteRegistry = (parIndex) => {
     showUsers();
 }
 
+/**
+ * It takes the index of the user in the array and fills the form with the user's data.
+ * @param parIndex - the index of the user in the array
+ */
 let fillForm = (parIndex) => {
     savedUsers = JSON.parse(localStorage.getItem('usersls'))
     document.getElementById('position').value = parIndex;
@@ -38,6 +52,10 @@ let fillForm = (parIndex) => {
     document.getElementById('workout').value = savedUsers[parIndex].workout;
 }
 
+/**
+ * It takes the values from the form, and then it updates the localStorage with the new values.
+ * @returns the value of the variable savedUsers.
+ */
 let updateRegistry = () => {
     let position = document.getElementById('position').value;
     let nameUser = document.getElementById('nameUser').value;
@@ -58,6 +76,10 @@ let updateRegistry = () => {
     showUsers();
 }
 
+/**
+ * It takes the values from the input fields, pushes them into the usersLS array, and then saves the
+ * array to local storage.
+ */
 let addRegistry = () => {
     usersLS = JSON.parse(localStorage.getItem('usersls'))
     const newUser = {
@@ -71,10 +93,14 @@ let addRegistry = () => {
     showUsers();
 }
 
+/**
+ * It clears the localstorage memory and then alerts the user that the memory was erased.
+ */
 let clearCache = () => {
     localStorage.clear();    
     alert('Localstorage memory was erased');
     showUsers();
 }
 
+/* It's calling the function showUsers() to show the users in the table. */
 showUsers();
