@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,48 +8,41 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
-
 <body>
     <div class="container">
         <div>
-            <header>
-                <h1>Gym</h1>
-            </header>
-            <main>
-                <form class="row g-3">
-                    <div class="col-auto">
-                        <label for="nameUser" class="visually-hidden">User Name</label>
-                        <input type="text" class="form-control" id="nameUser" placeholder="User Name">
-                        <input type="hidden" id="position">
-                    </div>
-                    <div class="col-auto">
-                        <label for="workout" class="visually-hidden">Workout</label>
-                        <input type="text" class="form-control" id="workout" placeholder="Workout">
-                    </div>
-                    <div class="col-auto">
-                        <button type="button" class="btn btn-success mb-3" onclick="addRegistry()">Add</button>
-                        <button type="button" class="btn btn-primary mb-3" onclick="updateRegistry()">Update</button>
-                        <button type="button" class="btn btn-info mb-3" onclick="clearCache()">Clear Cache</button>
-                        <button type="button" class="btn btn-warning mb-3" onclick="showUsers()">Update
-                            registry</button>
-                    </div>
-                </form>
-                <table class="table">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Workout</th>
-                            <th scope="col">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table>
-            </main>
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-                <p class="col-md-4 mb-0 text-muted">© 2022 Cristobal Vallejo</p>
-            </footer>
+            <h1>Gym</h1>
+            <form class="row g-3">
+                <div class="col-auto">
+                    <label for="nameUser" class="visually-hidden">User Name</label>
+                    <input type="text" class="form-control" id="nameUser" placeholder="User Name">
+                    <input type="hidden" id="position">
+                </div>
+                <div class="col-auto">
+                    <label for="workout" class="visually-hidden">Workout</label>
+                    <input type="text" class="form-control" id="workout" placeholder="Workout">
+                </div>
+                <div class="col-auto">
+                    <button type="button" class="btn btn-success mb-3" onclick="addRegistry()">Add</button>
+                    <button type="button" class="btn btn-primary mb-3"
+                        onclick="updateRegistry()">Update</button>
+                    <button type="button" class="btn btn-info mb-3"
+                    onclick="clearCache()">Clear Cache</button>
+                    <button type="button" class="btn btn-warning mb-3" onclick="showUsers()">Update registry</button>
+                </div>
+            </form>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Workout</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
         </div>
     </div>
     <script src="./js/script/index.js"></script>
@@ -58,5 +50,4 @@
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
 </body>
-
 </html>
